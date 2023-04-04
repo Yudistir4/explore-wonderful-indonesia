@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   black,
@@ -15,6 +15,7 @@ import {
 } from '@/utils/animationUtils';
 interface Props {
   show: boolean;
+  setShowBgNavbar: Dispatch<SetStateAction<boolean>>;
 }
 
 interface Place {
@@ -36,12 +37,13 @@ const places: Place[] = [
   //   'Yogyakarta',
 ];
 
-const Menu = ({ show }: Props) => {
-  const [place, setPlace] = useState<Place | null>(places[0]);
+const Menu = ({ show, setShowBgNavbar }: Props) => {
+  const [place, setPlace] = useState<Place | null>(null);
   return (
-    <AnimatePresence>
+    <AnimatePresence onExitComplete={() => setShowBgNavbar(true)}>
       {show && (
-        <>
+        <div className="w-full h-screen fixed z-20 overflow-hidden " id="menu">
+          {/* <> */}
           {/* Background */}
           <AnimatePresence>
             {place && (
@@ -176,7 +178,8 @@ const Menu = ({ show }: Props) => {
           </motion.div>
 
           <div className="z-40">asas</div>
-        </>
+          {/* </> */}
+        </div>
       )}
     </AnimatePresence>
   );

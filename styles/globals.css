@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.running-text {
+  animation: marquee 10s linear infinite;
+}
+
+.shadow {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(10vw);
+  }
+
+  to {
+    transform: translateX(-140vw);
+  }
+}
