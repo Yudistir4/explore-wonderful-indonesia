@@ -90,7 +90,7 @@ const Menu = ({ show, setShowBgNavbar }: Props) => {
             exit="exit"
             className="h-screen  w-[200vw] bg-black absolute -left-10 "
           ></motion.div>
-          <motion.div className="m-auto h-screen w-full relative z-20 p-20  gap-10 flex flex-col items-center justify-center max-w-[90rem]">
+          <motion.div className="m-auto h-screen w-full relative z-20 p-20  gap-10 flex flex-col items-center justify-center max-w-[90rem] xl:max-w-none xl:px-[12vw]">
             <div className="flex w-full items-center gap-10 justify-center sm:justify-between">
               {/* title */}
               <motion.div

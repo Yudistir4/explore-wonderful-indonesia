@@ -34,7 +34,7 @@ const Navbar = ({ setShow, show, setShowBgNavbar, showBgNavbar }: Props) => {
         <div
           className={`${
             showBgNavbar && 'bg-white'
-          } transition-all m-auto py-5 px-5 sm:px-20 max-w-[90rem] w-full flex justify-between items-center   fixed top-0 left-1/2 -translate-x-1/2  z-30 `}
+          } transition-all m-auto py-5 px-5 sm:px-20 max-w-[90rem] xl:max-w-none xl:px-[12vw] w-full flex justify-between items-center   fixed top-0 left-1/2 -translate-x-1/2  z-30 `}
         >
           <div className="relative w-[140px] sm:w-[160px] h-16">
             <Image
